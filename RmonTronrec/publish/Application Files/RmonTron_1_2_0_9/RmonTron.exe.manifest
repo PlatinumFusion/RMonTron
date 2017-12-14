@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="RmonTron.exe" version="1.2.0.9" publicKeyToken="ecd5351c990fe3cd" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="RmonTron" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="RmonTron.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RmonTron.exe" size="109528">
+      <assemblyIdentity name="RmonTron" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9fa1pOfxZ9tFZl4xNYMty8BL6Llm+JYmXuvVgl3cl7A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="RmonTron.exe.config" size="1448">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Gd9jGXnhK3Xnz6SivD/idjE/ysOjo7Pez+yzBpgc2uc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 8.1, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-QFG11TL\Mike" issuerKeyHash="54eae46cd63fff5193e40a1f822a133e06fdd252" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9MLHfi/HdfhufDtcOfeEdfuJpif1DH7vAnf41wU0GUo=</DigestValue></Reference></SignedInfo><SignatureValue>UjkKO5DnRyxHi7GG+ioPkwp09hpVcuOqXIe4ReCa6Y8xaDsqkTd01xSHBYVAmGGjQHNsO/1IgMkHTbdHq9WvInsZNZEZGk+N4fC9rTU9zBSduQRb9B6Fif3CGNOHp6XeJs1LVwlskVC4mNEzqrFGDK1iJ5FXP8Z0fDa/fk9vJIs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>p/oJFBwYTZA5ymMV63NvJLwc4DvvKB8mPiMw7u968JajhW7OV5/TaqZyi7smpe2n730VluiATKQg5MQES3pJksLozYoqJoaCxCzNPNI5YPcNsHLEwIamSRQdkkWWo2dognYQdiVlaUgyo2qSbszLR4qm/RpT4Cns2vjX6Wicyg0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4a193405d7f87702ef7e0cf527a689fb7584f7395c3b7c6ef875c72f7ec7c2f4" Description="" Url=""><as:assemblyIdentity name="RmonTron.exe" version="1.2.0.9" publicKeyToken="ecd5351c990fe3cd" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-QFG11TL\Mike</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>SJ8c7vQE/PiXnDV4448tO7k4KCSdTv/GRAi6ag6aBow=</DigestValue></Reference></SignedInfo><SignatureValue>MzMyCJ3UvMZ6eAlaWm3ls4aHfoM4NuN2oumzM1zO6i5+0+h3J6WDNz/cJwvNjkKSJi7/zbdHZOwpScwrOHLQCU4qYauGtFRDtmeQkFR+cZYQRN4RZ67C56/TaGoHy2RZdVVTOXzCGYHagscUjgrXSmh+BzGPu12KAemaqjrnEWY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>p/oJFBwYTZA5ymMV63NvJLwc4DvvKB8mPiMw7u968JajhW7OV5/TaqZyi7smpe2n730VluiATKQg5MQES3pJksLozYoqJoaCxCzNPNI5YPcNsHLEwIamSRQdkkWWo2dognYQdiVlaUgyo2qSbszLR4qm/RpT4Cns2vjX6Wicyg0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQRRq+vthFWJlDqZDffBlQ5DANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAFEARgBHADEAMQBUAEwAXABNAGkAawBlMB4XDTE3MDUyMDE0MzkyOVoXDTE4MDUyMDIwMzkyOVowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBRAEYARwAxADEAVABMAFwATQBpAGsAZTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAp/oJFBwYTZA5ymMV63NvJLwc4DvvKB8mPiMw7u968JajhW7OV5/TaqZyi7smpe2n730VluiATKQg5MQES3pJksLozYoqJoaCxCzNPNI5YPcNsHLEwIamSRQdkkWWo2dognYQdiVlaUgyo2qSbszLR4qm/RpT4Cns2vjX6Wicyg0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQAmE5DWt9fLPAYTbL7Ko7wIp9biOetsmCrxBB8VM7Bp832Qp0l0aQfjfYnQtilmQfkqTGKJSEaEvB6IqKQSjVNmi9kgNWHmoo+GHbXFcsVu0Wy9ZCqKAwZLPips8lNRZOBJoFpywdqOEMTuslE2r8Scdj7OC/3fQhL43+0jZqzBKw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

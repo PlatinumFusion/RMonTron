@@ -1,0 +1,1 @@
+Make sure you extract the folder and run 'setup.exe' from the same folder as the 'RmonTronrec.application'
