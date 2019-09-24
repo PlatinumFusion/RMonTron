@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RmonTron.exe" size="111064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RmonTron.exe" size="91136">
       <assemblyIdentity name="RmonTron" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZH/zZ3qEyT94h4gJkqELL1Tg+JLc++GWG/zSaRXWVfI=</dsig:DigestValue>
+        <dsig:DigestValue>Bi59AvBLcCwV69uDimgQBbDulkYHWfL4kw155Q0ohVU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

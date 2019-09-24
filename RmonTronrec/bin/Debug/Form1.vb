@@ -16,10 +16,20 @@ Public Class MainSet
     Public r() As String
     Public bordercolor As Color
     Public line As String = Nothing ' this in the in data from the telnet connection string
+    Public ScoreModeQual = True 'To determine Race Mode or Score Mode 'Default is Qualify Mode
+    Public RacePOS(10) As String
+    Public QualPOS(10) As String
+    Public Lapcount As String
+    Public PassQualTime As String
 
 
     Public Sub New()
-
+        For Each x In QualPOS
+            x = ""
+        Next
+        For Each x In RacePOS
+            x = ""
+        Next
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -289,71 +299,164 @@ Public Class MainSet
                         'TextBox2.Text = line
                         ''' DIM r STARTS HERE
                         Dim r() As String = Split(line, ",")
+
                         If r(0) = "$G" Then
+                                If r(1) = "1" Then
+                                'PlayerForm.LapCount.Text = r(3)
+                                Lapcount = r(3)
+                                'PlayerForm.Pos1.Text = "1  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                RacePOS(0) = "1  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "2" Then
+                                    'PlayerForm.Pos2.Text = "2  " + newline + r(2).Substring(1, r(2).Length - 2) 'IndexOf("\""")
+                                    RacePOS(1) = "2  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "3" Then
+                                    'PlayerForm.Pos3.Text = "3  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(2) = "3  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "4" Then
+                                    'PlayerForm.Pos4.Text = "4  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(3) = "4  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "5" Then
+                                    'PlayerForm.Pos5.Text = "5  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(4) = "5  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "6" Then
+                                    ' PlayerForm.Pos6.Text = "6  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(5) = "6  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "7" Then
+                                    'PlayerForm.Pos7.Text = "7  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(6) = "7  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "8" Then
+                                    'PlayerForm.Pos8.Text = "8  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(7) = "8  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "9" Then
+                                    'PlayerForm.Pos9.Text = "9  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(8) = "9  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                                If r(1) = "10" Then
+                                    'PlayerForm.Pos9.Text = "9  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                    RacePOS(9) = "10  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                End If
+                            End If
+
+
+
+                        If r(0) = "$H" Then
                             If r(1) = "1" Then
-                                PlayerForm.LapCount.Text = r(3)
-                                PlayerForm.Pos1.Text = "1  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                'PlayerForm.LapCount.Text = r(3)
+                                'Lapcount = r(3)
+                                'PlayerForm.Pos1.Text = "1  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(0) = "1  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "2" Then
-                                PlayerForm.Pos2.Text = "2  " + newline + r(2).Substring(1, r(2).Length - 2) 'IndexOf("\""")
+                                'PlayerForm.Pos2.Text = "2  " + newline + r(2).Substring(1, r(2).Length - 2) 'IndexOf("\""")
+                                QualPOS(1) = "2  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "3" Then
-                                PlayerForm.Pos3.Text = "3  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                'PlayerForm.Pos3.Text = "3  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(2) = "3  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "4" Then
-                                PlayerForm.Pos4.Text = "4  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                'PlayerForm.Pos4.Text = "4  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(3) = "4  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "5" Then
-                                PlayerForm.Pos5.Text = "5  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                'PlayerForm.Pos5.Text = "5  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(4) = "5  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "6" Then
-                                PlayerForm.Pos6.Text = "6  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                'PlayerForm.Pos6.Text = "6  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(5) = "6  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "7" Then
-                                PlayerForm.Pos7.Text = "7  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                'PlayerForm.Pos7.Text = "7  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(6) = "7  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "8" Then
-                                PlayerForm.Pos8.Text = "8  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                ' PlayerForm.Pos8.Text = "8  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(7) = "8  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
                             If r(1) = "9" Then
-                                PlayerForm.Pos9.Text = "9  " + newline + r(2).Substring(1, r(2).Length - 2)
+
+                                'PlayerForm.Pos9.Text = "9  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(8) = "9  " + newline + r(2).Substring(1, r(2).Length - 2)
                             End If
-                        ElseIf r(0) = "$F" Then
+                            If r(1) = "10" Then
+                                'PlayerForm.Pos9.Text = "10  " + newline + r(2).Substring(1, r(2).Length - 2)
+                                QualPOS(9) = "10  " + newline + r(2).Substring(1, r(2).Length - 2)
+                            End If
+                        End If
 
-                            If r(5) = """Green """ Then
-                                If PlayerForm.bordercolor <> Color.Green Then
-                                    PlayerForm.bordercolor = Color.Green
-                                    'AddHandler PlayerForm.Paint, AddressOf PlayerForm.PlayerForm_Paint
-                                    'Me.Controls.Add(PlayerForm)
-                                    'ControlPaint.DrawBorder(e.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
-                                    'PlayerForm.Paint()
-                                    PlayerForm.Invalidate()
-                                End If
+                        If r(0) = "$J" Then
+                            PassQualTime = r(2)
+                        End If
 
-                            ElseIf r(5) = """Yellow""" Then
-                                If PlayerForm.bordercolor <> Color.Yellow Then
-                                    PlayerForm.bordercolor = Color.Yellow
-                                    'ControlPaint.DrawBorder(e.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
-                                    PlayerForm.Invalidate()
-                                End If
-                            ElseIf r(5) = """Red   """ Then
-                                If PlayerForm.bordercolor <> Color.Red Then
-                                    PlayerForm.bordercolor = Color.Red
+                        If ScoreModeQual = False Then
+                                PlayerForm.LapCount.Text = Lapcount
+                                PlayerForm.Pos1.Text = RacePOS(0)
+                                PlayerForm.Pos2.Text = RacePOS(1)
+                                PlayerForm.Pos3.Text = RacePOS(2)
+                                PlayerForm.Pos4.Text = RacePOS(3)
+                                PlayerForm.Pos5.Text = RacePOS(4)
+                                PlayerForm.Pos6.Text = RacePOS(5)
+                                PlayerForm.Pos7.Text = RacePOS(6)
+                                PlayerForm.Pos8.Text = RacePOS(7)
+                                PlayerForm.Pos9.Text = RacePOS(8)
+                            Else
+                            PlayerForm.LapCount.Text = PassQualTime
+                            PlayerForm.Pos1.Text = QualPOS(0)
+                            PlayerForm.Pos2.Text = QualPOS(1)
+                            PlayerForm.Pos3.Text = QualPOS(2)
+                            PlayerForm.Pos4.Text = QualPOS(3)
+                            PlayerForm.Pos5.Text = QualPOS(4)
+                            PlayerForm.Pos6.Text = QualPOS(5)
+                            PlayerForm.Pos7.Text = QualPOS(6)
+                            PlayerForm.Pos8.Text = QualPOS(7)
+                            PlayerForm.Pos9.Text = QualPOS(8)
+                        End If
+
+                        If r(0) = "$F" Then
+
+                                If r(5) = """Green """ Then
+                                    If PlayerForm.bordercolor <> Color.Green Then
+                                        PlayerForm.bordercolor = Color.Green
+                                        'AddHandler PlayerForm.Paint, AddressOf PlayerForm.PlayerForm_Paint
+                                        'Me.Controls.Add(PlayerForm)
+                                        'ControlPaint.DrawBorder(e.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
+                                        'PlayerForm.Paint()
+                                        PlayerForm.Invalidate()
+                                    End If
+
+                                ElseIf r(5) = """Yellow""" Then
+                                    If PlayerForm.bordercolor <> Color.Yellow Then
+                                        PlayerForm.bordercolor = Color.Yellow
+                                        'ControlPaint.DrawBorder(e.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
+                                        PlayerForm.Invalidate()
+                                    End If
+                                ElseIf r(5) = """Red   """ Then
+                                    If PlayerForm.bordercolor <> Color.Red Then
+                                        PlayerForm.bordercolor = Color.Red
+                                        'ControlPaint.DrawBorder(.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
+                                        PlayerForm.Invalidate()
+                                    End If
+                                ElseIf r(5) = """      """ Then
+                                    PlayerForm.bordercolor = Color.Black
                                     'ControlPaint.DrawBorder(.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
                                     PlayerForm.Invalidate()
+                                Else
+                                    PlayerForm.bordercolor = Color.Black
                                 End If
-                            ElseIf r(5) = """      """ Then
-                                PlayerForm.bordercolor = Color.Black
-                                'ControlPaint.DrawBorder(.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
-                                PlayerForm.Invalidate()
-                            Else
-                                PlayerForm.bordercolor = Color.Black
+                                'Else : End If 'end if for millis
+
+
                             End If
-                            'Else : End If 'end if for millis
-
-
-                        End If
-                        If dbgen.Checked Then
+                            If dbgen.Checked Then
                             TextBox2.Text = line
                         End If
 
@@ -368,6 +471,7 @@ Public Class MainSet
                     End While
                 Catch e As Exception
                     ConnectionStatus.Text = "error"
+                    Console.WriteLine(e)
                     BackgroundWorker1.Dispose()
                     GetLineBGW.Dispose()
                     GetLineBGW.CancelAsync()
@@ -577,6 +681,23 @@ Public Class MainSet
             PlayerForm.TopMost = True
         Else
             PlayerForm.TopMost = False
+        End If
+    End Sub
+
+    Private Sub ScoreQual_CheckedChanged(sender As Object, e As EventArgs) Handles ScoreQual.CheckedChanged
+        If ScoreQual.Checked Then
+            ScoreModeQual = True
+        Else
+            ScoreModeQual = False
+        End If
+
+    End Sub
+
+    Private Sub ScoreRace_CheckedChanged(sender As Object, e As EventArgs) Handles ScoreRace.CheckedChanged
+        If ScoreRace.Checked Then
+            ScoreModeQual = False
+        Else
+            ScoreModeQual = True
         End If
     End Sub
 End Class

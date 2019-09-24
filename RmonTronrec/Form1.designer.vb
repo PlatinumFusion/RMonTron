@@ -47,29 +47,34 @@ Partial Class MainSet
         Me.FontButton = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.PosNTop = New System.Windows.Forms.CheckBox()
         Me.ResetLocButton = New System.Windows.Forms.Button()
         Me.SaveLocButton = New System.Windows.Forms.Button()
-        Me.PosNTop = New System.Windows.Forms.CheckBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.LengthText = New System.Windows.Forms.NumericUpDown()
         Me.WidthText = New System.Windows.Forms.NumericUpDown()
         Me.GetLineBGW = New System.ComponentModel.BackgroundWorker()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.ScoreQual = New System.Windows.Forms.RadioButton()
+        Me.ScoreRace = New System.Windows.Forms.RadioButton()
+        Me.ScoreAuto = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         CType(Me.LengthText, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.WidthText, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -77,7 +82,7 @@ Partial Class MainSet
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.ExitToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(479, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(577, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -90,7 +95,7 @@ Partial Class MainSet
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
@@ -167,7 +172,7 @@ Partial Class MainSet
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConnectionStatus})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 228)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(479, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(577, 22)
         Me.StatusStrip1.TabIndex = 10
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -270,6 +275,77 @@ Partial Class MainSet
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Player Style"
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(6, 72)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(98, 17)
+        Me.CheckBox2.TabIndex = 24
+        Me.CheckBox2.Text = "Always On Top"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(6, 55)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(99, 17)
+        Me.CheckBox1.TabIndex = 23
+        Me.CheckBox1.Text = "Start Fullscreen"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.Button6)
+        Me.GroupBox5.Controls.Add(Me.Button5)
+        Me.GroupBox5.Location = New System.Drawing.Point(238, 14)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(81, 107)
+        Me.GroupBox5.TabIndex = 22
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Lap Counter"
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(6, 70)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(63, 23)
+        Me.Button6.TabIndex = 19
+        Me.Button6.Text = "Text Color"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(6, 41)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(40, 23)
+        Me.Button5.TabIndex = 19
+        Me.Button5.Text = "Font"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.PosNTop)
+        Me.GroupBox4.Controls.Add(Me.FontButton)
+        Me.GroupBox4.Controls.Add(Me.Button3)
+        Me.GroupBox4.Location = New System.Drawing.Point(122, 13)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(109, 108)
+        Me.GroupBox4.TabIndex = 21
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Positions"
+        '
+        'PosNTop
+        '
+        Me.PosNTop.AutoSize = True
+        Me.PosNTop.Location = New System.Drawing.Point(6, 19)
+        Me.PosNTop.Name = "PosNTop"
+        Me.PosNTop.Size = New System.Drawing.Size(96, 17)
+        Me.PosNTop.TabIndex = 18
+        Me.PosNTop.Text = "Place # on top"
+        Me.PosNTop.UseVisualStyleBackColor = True
+        '
         'ResetLocButton
         '
         Me.ResetLocButton.Location = New System.Drawing.Point(53, 98)
@@ -287,16 +363,6 @@ Partial Class MainSet
         Me.SaveLocButton.TabIndex = 19
         Me.SaveLocButton.Text = "Save"
         Me.SaveLocButton.UseVisualStyleBackColor = True
-        '
-        'PosNTop
-        '
-        Me.PosNTop.AutoSize = True
-        Me.PosNTop.Location = New System.Drawing.Point(6, 19)
-        Me.PosNTop.Name = "PosNTop"
-        Me.PosNTop.Size = New System.Drawing.Size(96, 17)
-        Me.PosNTop.TabIndex = 18
-        Me.PosNTop.Text = "Place # on top"
-        Me.PosNTop.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -331,73 +397,57 @@ Partial Class MainSet
         '
         Me.GetLineBGW.WorkerSupportsCancellation = True
         '
-        'GroupBox4
+        'GroupBox6
         '
-        Me.GroupBox4.Controls.Add(Me.PosNTop)
-        Me.GroupBox4.Controls.Add(Me.FontButton)
-        Me.GroupBox4.Controls.Add(Me.Button3)
-        Me.GroupBox4.Location = New System.Drawing.Point(122, 13)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(109, 108)
-        Me.GroupBox4.TabIndex = 21
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Positions"
+        Me.GroupBox6.Controls.Add(Me.ScoreAuto)
+        Me.GroupBox6.Controls.Add(Me.ScoreRace)
+        Me.GroupBox6.Controls.Add(Me.ScoreQual)
+        Me.GroupBox6.Location = New System.Drawing.Point(470, 27)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(97, 90)
+        Me.GroupBox6.TabIndex = 20
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Score Type"
         '
-        'GroupBox5
+        'ScoreQual
         '
-        Me.GroupBox5.Controls.Add(Me.Button6)
-        Me.GroupBox5.Controls.Add(Me.Button5)
-        Me.GroupBox5.Location = New System.Drawing.Point(238, 14)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(81, 107)
-        Me.GroupBox5.TabIndex = 22
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Lap Counter"
+        Me.ScoreQual.AutoSize = True
+        Me.ScoreQual.Location = New System.Drawing.Point(6, 19)
+        Me.ScoreQual.Name = "ScoreQual"
+        Me.ScoreQual.Size = New System.Drawing.Size(83, 17)
+        Me.ScoreQual.TabIndex = 0
+        Me.ScoreQual.Text = "Qualify Time"
+        Me.ScoreQual.UseVisualStyleBackColor = True
         '
-        'Button5
+        'ScoreRace
         '
-        Me.Button5.Location = New System.Drawing.Point(6, 41)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(40, 23)
-        Me.Button5.TabIndex = 19
-        Me.Button5.Text = "Font"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.ScoreRace.AutoSize = True
+        Me.ScoreRace.Location = New System.Drawing.Point(6, 42)
+        Me.ScoreRace.Name = "ScoreRace"
+        Me.ScoreRace.Size = New System.Drawing.Size(51, 17)
+        Me.ScoreRace.TabIndex = 1
+        Me.ScoreRace.Text = "Race"
+        Me.ScoreRace.UseVisualStyleBackColor = True
         '
-        'Button6
+        'ScoreAuto
         '
-        Me.Button6.Location = New System.Drawing.Point(6, 70)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(63, 23)
-        Me.Button6.TabIndex = 19
-        Me.Button6.Text = "Text Color"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 55)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(99, 17)
-        Me.CheckBox1.TabIndex = 23
-        Me.CheckBox1.Text = "Start Fullscreen"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 72)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(98, 17)
-        Me.CheckBox2.TabIndex = 24
-        Me.CheckBox2.Text = "Always On Top"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.ScoreAuto.AutoSize = True
+        Me.ScoreAuto.Checked = True
+        Me.ScoreAuto.Location = New System.Drawing.Point(6, 65)
+        Me.ScoreAuto.Name = "ScoreAuto"
+        Me.ScoreAuto.Size = New System.Drawing.Size(47, 17)
+        Me.ScoreAuto.TabIndex = 2
+        Me.ScoreAuto.TabStop = True
+        Me.ScoreAuto.Text = "Auto"
+        Me.ScoreAuto.UseVisualStyleBackColor = True
         '
         'MainSet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(479, 250)
+        Me.ClientSize = New System.Drawing.Size(577, 250)
         Me.ControlBox = False
+        Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.WidthText)
         Me.Controls.Add(Me.LengthText)
         Me.Controls.Add(Me.GroupBox3)
@@ -424,11 +474,13 @@ Partial Class MainSet
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.LengthText, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.WidthText, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
+        CType(Me.LengthText, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WidthText, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -472,4 +524,8 @@ Partial Class MainSet
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents ScoreAuto As RadioButton
+    Friend WithEvents ScoreRace As RadioButton
+    Friend WithEvents ScoreQual As RadioButton
 End Class

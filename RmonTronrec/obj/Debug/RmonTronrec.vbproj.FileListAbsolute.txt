@@ -20,3 +20,27 @@ C:\Users\Mike\Documents\Visual Studio 2013\Projects\RmonTronrec\RmonTronrec\obj\
 C:\Users\Mike\Documents\Visual Studio 2013\Projects\RmonTronrec\RmonTronrec\obj\Debug\RmonTron.exe
 C:\Users\Mike\Documents\Visual Studio 2013\Projects\RmonTronrec\RmonTronrec\obj\Debug\RmonTron.xml
 C:\Users\Mike\Documents\Visual Studio 2013\Projects\RmonTronrec\RmonTronrec\obj\Debug\RmonTron.pdb
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\Player.resx
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\Player.designer.vb
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\Player.vb
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\Form1.resx
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\Form1.designer.vb
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\Form1.vb
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\RmonTron.exe.config
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\RmonTron.exe.manifest
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\RmonTron.application
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\RmonTron.exe
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\RmonTron.pdb
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\bin\Debug\RmonTron.xml
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTronrec.vbprojAssemblyReference.cache
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.AboutBox.resources
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.MainSet.resources
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.Resources.resources
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.PlayerForm.resources
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTronrec.vbproj.GenerateResource.cache
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTronrec.vbproj.CoreCompileInputs.cache
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.exe.manifest
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.application
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.exe
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.xml
+C:\Users\Michael\Source\Repos\RMonTron\RmonTronrec\obj\Debug\RmonTron.pdb
