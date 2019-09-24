@@ -292,7 +292,7 @@ Public Class PlayerForm
         dragPOS = False
 
     End Sub
-    Private Sub LapCounter_MouseUp(sender As Object, e As EventArgs) Handles LapCount.MouseDown
+    Private Sub LapCounter_MouseDown(sender As Object, e As EventArgs) Handles LapCount.MouseDown
         dragPOS = True
         mousexPOS = Windows.Forms.Cursor.Position.X - LapCount.Left
         mouseyPOS = Windows.Forms.Cursor.Position.Y - LapCount.Top
@@ -305,11 +305,11 @@ Public Class PlayerForm
         End If
     End Sub
 
-    Private Sub LapCounter_MouseUp(sender As Object, e As MouseEventArgs) Handles LapCount.MouseUp, LapCount.MouseDown
+    Private Sub LapCounter_MouseUp(sender As Object, e As MouseEventArgs) Handles LapCount.MouseUp
         dragPOS = False
 
     End Sub
-    Private Sub LapLabel_MouseUp(sender As Object, e As EventArgs) Handles LapLabel.MouseDown
+    Private Sub LapLabel_MouseDown(sender As Object, e As EventArgs) Handles LapLabel.MouseDown
         dragPOS = True
         mousexPOS = Windows.Forms.Cursor.Position.X - LapLabel.Left
         mouseyPOS = Windows.Forms.Cursor.Position.Y - LapLabel.Top
@@ -322,7 +322,7 @@ Public Class PlayerForm
         End If
     End Sub
 
-    Private Sub LapLabel_MouseUp(sender As Object, e As MouseEventArgs) Handles LapLabel.MouseUp, LapLabel.MouseDown
+    Private Sub LapLabel_MouseUp(sender As Object, e As MouseEventArgs) Handles LapLabel.MouseUp
         dragPOS = False
 
     End Sub

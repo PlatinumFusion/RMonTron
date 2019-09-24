@@ -394,7 +394,14 @@ Public Class MainSet
                         End If
 
                         If r(0) = "$J" Then
-                            PassQualTime = r(2)
+
+
+                            Dim SplitPassQualTime() = Split(r(2).Substring(1, r(2).Length - 2), ":")
+                            Dim Hr = SplitPassQualTime(0) 'Hour
+                            Dim Min = SplitPassQualTime(1) 'Minutes
+                            Dim Sec = SplitPassQualTime(2) ' Seconds
+                            PassQualTime = SplitPassQualTime(2) 'Only passing Seconds to the PassQualTime
+
                         End If
 
                         If ScoreModeQual = False Then
@@ -407,8 +414,9 @@ Public Class MainSet
                                 PlayerForm.Pos6.Text = RacePOS(5)
                                 PlayerForm.Pos7.Text = RacePOS(6)
                                 PlayerForm.Pos8.Text = RacePOS(7)
-                                PlayerForm.Pos9.Text = RacePOS(8)
-                            Else
+                            PlayerForm.Pos9.Text = RacePOS(8)
+                            PlayerForm.LapLabel.Text = "Lap"
+                        Else
                             PlayerForm.LapCount.Text = PassQualTime
                             PlayerForm.Pos1.Text = QualPOS(0)
                             PlayerForm.Pos2.Text = QualPOS(1)
@@ -419,6 +427,7 @@ Public Class MainSet
                             PlayerForm.Pos7.Text = QualPOS(6)
                             PlayerForm.Pos8.Text = QualPOS(7)
                             PlayerForm.Pos9.Text = QualPOS(8)
+                            PlayerForm.LapLabel.Text = "Time"
                         End If
 
                         If r(0) = "$F" Then
