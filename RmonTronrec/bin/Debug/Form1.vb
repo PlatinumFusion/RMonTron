@@ -459,8 +459,9 @@ Public Class MainSet
                                     'ControlPaint.DrawBorder(.Graphics, PlayerForm.DisplayRectangle, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid, bordercolor, 5, ButtonBorderStyle.Solid)
                                     PlayerForm.Invalidate()
                                 Else
-                                    PlayerForm.bordercolor = Color.Black
-                                End If
+                                PlayerForm.bordercolor = Color.Black
+                                PlayerForm.Invalidate()
+                            End If
                                 'Else : End If 'end if for millis
 
 
